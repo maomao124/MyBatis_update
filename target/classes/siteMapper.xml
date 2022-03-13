@@ -28,4 +28,10 @@
             age=#{age}
         where id = #{id};
     </update>
+    <update id="updateSiteByBean2">
+        update website
+        set name=#{site.name},
+            age=#{site.age}
+        where id = #{site.id};
+    </update>
 </mapper>
