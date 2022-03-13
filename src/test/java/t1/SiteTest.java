@@ -70,4 +70,64 @@ class SiteTest
         sqlSession.commit();
         sqlSession.close();
     }
+
+    @Test
+    void updateSiteByBean() throws IOException
+    {
+        //读取配置文件mybatis-config.xml
+        InputStream config = Resources.getResourceAsStream("mybatis-config.xml");
+        //根据配置文件构建SqlSessionFactory
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(config);
+        //通过SqlSessionFactory创建SqlSession
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+
+        t1.data.Site site=new t1.data.Site(2,"百度","",14,"",null);
+
+        Site site1 = sqlSession.getMapper(Site.class);
+        int i = site1.updateSiteByBean(site);
+        System.out.println(i);
+
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
+    @Test
+    void updateSiteByBean1() throws IOException
+    {
+        //读取配置文件mybatis-config.xml
+        InputStream config = Resources.getResourceAsStream("mybatis-config.xml");
+        //根据配置文件构建SqlSessionFactory
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(config);
+        //通过SqlSessionFactory创建SqlSession
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+
+        t1.data.Site site=new t1.data.Site(2,"百度","",14,"",null);
+
+        Site site1 = sqlSession.getMapper(Site.class);
+        int i = site1.updateSiteByBean(site);
+        System.out.println(i);
+
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
+    @Test
+    void updateSiteByBean2() throws IOException
+    {
+        //读取配置文件mybatis-config.xml
+        InputStream config = Resources.getResourceAsStream("mybatis-config.xml");
+        //根据配置文件构建SqlSessionFactory
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(config);
+        //通过SqlSessionFactory创建SqlSession
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+
+        t1.data.Site site=new t1.data.Site(2,"百度","",14,"",null);
+
+        Site site1 = sqlSession.getMapper(Site.class);
+        int i = site1.updateSiteByBean(site);
+        System.out.println(i);
+
+        sqlSession.commit();
+        sqlSession.close();
+    }
 }

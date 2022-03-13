@@ -22,4 +22,10 @@ public interface Site
     public int updateSite(@Param("id") String id, @Param("name") String name, @Param("age") String age);
 
     public int updateSiteByMap(HashMap<String,Object> map);
+
+    public int updateSiteByBean(t1.data.Site site);
+
+    public int updateSiteByBean1(@Param("site") t1.data.Site site);
+
+    public int updateSiteByBean2(@Param("site") t1.data.Site site);
 }

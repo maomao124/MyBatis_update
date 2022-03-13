@@ -16,4 +16,22 @@
             age=#{age}
         where id = #{id};
     </update>
+    <update id="updateSiteByBean" parameterType="site">
+        update website
+        set name=#{name},
+            age=#{age}
+        where id = #{id};
+    </update>
+    <update id="updateSiteByBean1">
+        update website
+        set name=#{name},
+            age=#{age}
+        where id = #{id};
+    </update>
+    <update id="updateSiteByBean2">
+        update website
+        set name=#{site.name},
+            age=#{site.age}
+        where id = #{site.id};
+    </update>
 </mapper>
